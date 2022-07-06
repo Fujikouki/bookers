@@ -5,6 +5,7 @@
     <tr>
       <th>Title</th>
       <th>Body</th>
+      <th collapse="3"></th>
     </tr>
   </thead>
 
@@ -43,16 +44,20 @@
 
 
 
-<h3>New book</h3>
+<h2>New book</h2>
 <%= form_with model: @book do |f| %>
 
+<div class="field">
   <h4>Title</h4>
   <%= f.text_field :title %>
-
+</div>
+<div class="field">
   <h4>body</h4>
   <%= f.text_area :body %>
-
+</div>
+<div class="actions">
   <%= f.submit 'Create Book' %>
+</div>
 
 
 
